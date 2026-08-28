@@ -85,6 +85,36 @@ def limpar_tabela_geral(df):
         
     return df
 
+def drop_falses(df):
+    colunas_bool = df.select_dtypes(include=["bool", "boolean"]).columns
+    if not colunas_bool.empty:
+        df = df[df[colunas_bool].all(axis=1)]
+
+    return df
+
+def aplicar_formatacao(df):
+    colunas_format = {
+        "brand_name",
+        "category_name",
+        "legal_name",
+        "location_name",
+        "product_name"
+    }
+
+    if "product_name" in df.columns:
+        df["product_name"] = df["product_name"].replace(
+                {"João da Silva": "Motor de Popa 000000"}
+            )
+    if "status" in df.columns:
+        df["status"] = df["status"] == "paid"
+
+    for col in colunas_format:
+        if col in df.columns:
+            df[col] = df[col].astype(str).str.title()
+    
+    return df
+
+
 def run_silver():
     SILVER_DIR.mkdir(parents=True, exist_ok=True)
     
@@ -99,7 +129,8 @@ def run_silver():
         df = pd.read_csv(caminho_bronze)
 
         df = padronizar_colunas(df, tabela)
-
+        df = aplicar_formatacao(df)
+        df = drop_falses(df)
         # 2. Aplica limpezas gerais
         df = limpar_tabela_geral(df)
             
