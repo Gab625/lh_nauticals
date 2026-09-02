@@ -2,11 +2,13 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 DADOS_DIR = BASE_DIR / "dados"
+SCHEMA_DIR = BASE_DIR / "csv_to_ddl"
 
 RAW_DIR = DADOS_DIR / "raw"
 BRONZE_DIR = DADOS_DIR / "bronze"
 SILVER_DIR = DADOS_DIR / "silver"
 GOLD_DIR = DADOS_DIR / "gold"
+SCHEMA_SCRIPT = SCHEMA_DIR / "schema.sql"
 
 TABELAS_SELECIONADAS = [
     "brands",
