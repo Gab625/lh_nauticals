@@ -1,7 +1,7 @@
 import pandas as pd
 from src.config import RAW_DIR, BRONZE_DIR, TABELAS_SELECIONADAS
 
-def load_bronze():
+def run_bronze():
     BRONZE_DIR.mkdir(parents=True, exist_ok=True)
 
     for tabela in TABELAS_SELECIONADAS:
@@ -17,4 +17,4 @@ def load_bronze():
             print(f"[BRONZE] Erro '{tabela}.csv' não encontrada")
 
 if __name__ == "__main__":
-    load_bronze()
+    run_bronze()

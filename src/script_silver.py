@@ -108,6 +108,9 @@ def aplicar_formatacao(df):
     if "status" in df.columns:
         df["status"] = df["status"] == "paid"
 
+    if "placed_at" in df.columns:
+        df["placed_at"] = pd.to_datetime(df["placed_at"]).dt.normalize()
+        
     for col in colunas_format:
         if col in df.columns:
             df[col] = df[col].astype(str).str.title()
