@@ -51,17 +51,17 @@ lh_nauticals/
 
 ## ⚙️ Como Executar o Projeto
 
-* 1. Pré-requisitos
+1. Pré-requisitos
 Python instalado na máquina.
 Docker e Docker Compose configurados (opcional, caso queira subir o banco via container).
 
-* 2. Clonar o repositório e instalar dependências
+2. Clonar o repositório e instalar dependências
 git clone [https://github.com/Gab625/lh_nauticals.git](https://github.com/Gab625/lh_nauticals.git)
 cd lh_nauticals
 pip install -r requirements.txt
 
-* 3. Configurar as Variáveis de Ambiente
-O projeto utiliza variáveis de ambiente para gerenciar a conexão com o banco de dados. Na raiz do projeto, crie um arquivo chamado **`.env`** espelhando a seguinte estrutura:
+3. Configurar as Variáveis de Ambiente
+O projeto utiliza variáveis de ambiente para gerenciar a conexão com o banco de dados. Na raiz do projeto, crie um arquivo chamado **`.env`*espelhando a seguinte estrutura:
 
 ```env
 DB_USER=seu_usuario
@@ -69,9 +69,10 @@ DB_PASSWORD=sua_senha
 DB_HOST=localhost
 DB_PORT=5432
 DB_NAME=lh_nauticals
+```
 
-* 4. Subir o Banco de Dados (Opcional via Docker)
+4. Subir o Banco de Dados (Opcional via Docker)
 docker-compose up -d
 
-* 5. Executar o Pipeline
+5. Executar o Pipeline
 python main.py
