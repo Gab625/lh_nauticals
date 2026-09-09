@@ -4,6 +4,10 @@ Pipeline de dados end-to-end desenvolvido com base nos conceitos da **Arquitetur
 
 ---
 
+![Preview do Dashboard](assets/lh_naut_dash.png)
+
+---
+
 ## 🛠️ Tecnologias Utilizadas
 
 * **Python 3.10+** (Pandas, SQLAlchemy, Python-dotenv)
