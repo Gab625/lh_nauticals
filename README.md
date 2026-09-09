@@ -1,4 +1,4 @@
-# LH Nauticals Pipeline e dados, utilizando arquitetura Medalhão
+# ⚓ LH Nauticals Pipeline e dados, utilizando arquitetura Medalhão
 
 ![Preview do Dashboard](assets/lh_naut_dash.png)
 
