@@ -1,10 +1,12 @@
 # LH Nauticals Pipeline e dados, utilizando arquitetura Medalhão
 
+![Preview do Dashboard](assets/lh_naut_dash.png)
+
+## 📌 Visão Geral
 Pipeline de dados end-to-end desenvolvido com base nos conceitos da **Arquitetura Medallion (Raw -> Bronze -> Silver -> Gold)**, focado em engenharia de dados, tratamento de nulos/tipos, geração dinâmica de DDL e carga automatizada para banco relacional e Business Intelligence.
 
----
-
-![Preview do Dashboard](assets/lh_naut_dash.png)
+🔗 **[Acesse o Dashboard Interativo Aqui](https://datastudio.google.com/reporting/b9c16ab5-1002-40e4-8a80-f76ecd9afe10)**
+> 💡 **Dica de uso:** Este painel permite duplicação. Para utilizar este template com seus próprios dados ou ajustar a estrutura dos relatórios, clique nos três pontos (`⋮`) no canto superior direito do Looker Studio e selecione **Fazer uma cópia**.
 
 ---
 
