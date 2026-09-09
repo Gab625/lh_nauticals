@@ -2,6 +2,7 @@ from pathlib import Path
 import os
 import pandas as pd
 from sqlalchemy import create_engine, text
+from sqlalchemy.exc import OperationalError
 from dotenv import load_dotenv
 from src.config import SILVER_DIR, SCHEMA_SCRIPT
 
@@ -26,6 +27,12 @@ def run_exportation():
                 sql_script = f.read()
             conn.execute(text(sql_script))
         print("Schema executado com sucesso!\n")
+
+    except OperationalError as e:
+        print(f"Erro Crítico: Não foi possível conectar ao banco de dados '{db_name}' no host '{db_host}'.")
+        exit()
+
+
     except Exception as e:
         print(f"Erro ao executar o schema.sql: {e}")
         exit()
