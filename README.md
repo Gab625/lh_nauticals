@@ -43,11 +43,11 @@ lh_nauticals/
 
 ## 🔄 Fluxo de Processamento (Arquitetura Medallion)
 
-* 1. Raw (dados/raw/): Armazena os dados brutos obtidos da fonte original sem alterações.
-* 2. Bronze (script_bronze.py): Realiza a seleção inicial das tabelas e colunas de interesse para o escopo do negócio.
-* 3. Silver (script_silver.py): Executa a limpeza profunda, normalização de nomes, tratamento de valores inconsistentes e padronização de tipos.
-* 4. Gold (script_gold.py): Unifica as tabelas processadas, gerando a camada final pronta para consumo analítico.
-* 5. Carga e DDL (csv_to_ddl/ e script_db.py): Lê os arquivos estruturados, infere os tipos de dados via Pandas, gera dinamicamente os scripts DDL (schema.sql) e persiste tudo em um banco de dados PostgreSQL.
+1. Raw (dados/raw/): Armazena os dados brutos obtidos da fonte original sem alterações.
+2. Bronze (script_bronze.py): Realiza a seleção inicial das tabelas e colunas de interesse para o escopo do negócio.
+3. Silver (script_silver.py): Executa a limpeza profunda, normalização de nomes, tratamento de valores inconsistentes e padronização de tipos.
+4. Gold (script_gold.py): Unifica as tabelas processadas, gerando a camada final pronta para consumo analítico.
+5. Carga e DDL (csv_to_ddl/ e script_db.py): Lê os arquivos estruturados, infere os tipos de dados via Pandas, gera dinamicamente os scripts DDL (schema.sql) e persiste tudo em um banco de dados PostgreSQL.
 
 ## ⚙️ Como Executar o Projeto
 
